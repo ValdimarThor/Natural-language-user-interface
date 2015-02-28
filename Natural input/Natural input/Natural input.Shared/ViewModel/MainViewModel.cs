@@ -8,7 +8,7 @@ namespace Natural_input.ViewModel
 {
     public class MainViewModel : ViewModelBase
     {
-        public const string contentListPropertyName = "ContentList";
+        private const string contentListPropertyName = "ContentList";
         private ObservableCollection<ContentBase> contentList = null;
 
         public MainViewModel()

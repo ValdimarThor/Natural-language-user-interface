@@ -23,6 +23,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Model\ContentBase.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\ContentSelection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\ContentText.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Model\ContentType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelLocator.cs" />
   </ItemGroup>

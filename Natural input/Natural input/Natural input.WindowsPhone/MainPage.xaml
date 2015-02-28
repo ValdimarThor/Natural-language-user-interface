@@ -45,8 +45,7 @@
                 Grid.Row="1"
                 Margin="0"
                 ItemTemplateSelector="{StaticResource MainPageTemplateSelector}"
-                ItemsSource="{Binding ContentList}"
-                d:LayoutOverrides="Height, TopPosition, BottomPosition">
+                ItemsSource="{Binding ContentList}">
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <local:WrapPanel

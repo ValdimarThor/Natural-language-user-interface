@@ -9,6 +9,4 @@ namespace Natural_input.Model
     {
         public ContentType Type { get; set; }
     }
-
-    public enum ContentType { Text, ComboBox }
 }

@@ -7,8 +7,7 @@ namespace Natural_input.Model
 {
     public class ContentSelection : ContentBase
     {
-        public const string SelectedItemPropertyName = "SelectedItem";
-
+        private const string selectedItemPropertyName = "SelectedItem";
         private string selectedItem = string.Empty;
 
         public string SelectedItem
@@ -26,7 +25,7 @@ namespace Natural_input.Model
                 }
 
                 selectedItem = value;
-                RaisePropertyChanged(SelectedItemPropertyName);
+                RaisePropertyChanged(selectedItemPropertyName);
             }
         }
 
