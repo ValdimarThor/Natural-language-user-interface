@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="Natural_input.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Natural_input"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <Page.Resources>
+        <DataTemplate
+            x:Key="ContentSelectionTemplate">
+            <local:ContentSelectionUserControl />
+        </DataTemplate>
+        <DataTemplate
+            x:Key="TextTemplate">
+            <TextBlock
+                Text="{Binding Text}"
+                Style="{StaticResource CustomTextBlockStyle}" />
+        </DataTemplate>
+        <local:MainPageTemplateSelector
+            TextTemplate="{StaticResource TextTemplate}"
+            ContentSelectionTemplate="{StaticResource ContentSelectionTemplate}"
+            x:Name="MainPageTemplateSelector" />
+    </Page.Resources>
+    <Grid
+        Background="#FFC02942">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="200" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition
+                MinWidth="500"
+                MaxWidth="1500" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock
+            Text="NATURAL INPUT FORM"
+            Grid.Column="1"
+            Grid.Row="0"
+            Style="{StaticResource HeaderStyle}" />
+        <ItemsControl
+            Grid.Row="1"
+            Grid.Column="1"
+            Margin="0"
+            ItemTemplateSelector="{StaticResource MainPageTemplateSelector}"
+            ItemsSource="{Binding ContentList}"
+            d:LayoutOverrides="Height, TopPosition, BottomPosition">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <local:WrapPanel
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+        <TextBlock
+            Text="blendrocks"
+            Style="{StaticResource WatermarkTextStyle}"
+            Grid.ColumnSpan="3"
+            Grid.Row="2" />
+        <Button
+            x:Name="button"
+            Content="SEND FEEDBACK"
+            Margin="0,15,0,0"
+            VerticalAlignment="Top"
+            Grid.Column="1"
+            Grid.Row="2"
+            Foreground="#FF611122"
+            FontWeight="Normal"
+            FontSize="24"
+            CharacterSpacing="150"
+            FontStyle="Italic" />
+    </Grid>
+</Page>
