@@ -4,5 +4,5 @@ using System.Text;
 
 namespace Natural_input.Model
 {
-    public enum ContentType { Text, ComboBox }
+    public enum ContentType { Text, Selection }
 }

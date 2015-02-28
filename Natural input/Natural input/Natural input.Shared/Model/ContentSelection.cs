@@ -9,6 +9,10 @@ namespace Natural_input.Model
     {
         private const string selectedItemPropertyName = "SelectedItem";
         private string selectedItem = string.Empty;
+        public ContentSelection()
+        {
+            Type = ContentType.Selection;
+        }
 
         public string SelectedItem
         {

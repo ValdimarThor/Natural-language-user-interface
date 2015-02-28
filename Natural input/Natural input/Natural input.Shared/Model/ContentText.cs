@@ -6,6 +6,11 @@ namespace Natural_input.Model
 {
     public class ContentText : ContentBase
     {
+        public ContentText()
+        {
+            Type = ContentType.Text;
+        }
+
         public string Text { get; set; }
     }
 }

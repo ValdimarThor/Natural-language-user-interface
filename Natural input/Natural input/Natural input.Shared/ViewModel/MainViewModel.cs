@@ -42,11 +42,11 @@ namespace Natural_input.ViewModel
                         items.Add("indoor swim guides");
                     }
 
-                    ContentList.Add(new ContentSelection() { Items = items, SelectedItem = items[0], Type = ContentType.ComboBox });
+                    ContentList.Add(new ContentSelection() { Items = items, SelectedItem = items[0] });
                 }
                 else
                 {
-                    ContentList.Add(new ContentText() { Text = word, Type = ContentType.Text });
+                    ContentList.Add(new ContentText() { Text = word });
                 }
             }
         }
